@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologías de Desarrollo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h2.subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        p.description {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        h2.section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .button-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn-method {
+            border: none;
+            border-radius: 5px;
+            padding: 12px 0;
+            width: 200px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-method:hover {
+            opacity: 0.8;
+        }
+
+        
+        .btn-cascada { background-color: #1a73e8; }
+        .btn-modelo-v { background-color: #6c757d; }
+        .btn-agiles { background-color: #198754; }
+        .btn-scrum { background-color: #dc3545; }
+        .btn-kanban { background-color: #ffc107; color: #000; } 
+        .btn-xp { background-color: #0dcaf0; }
+        .btn-hibridas { background-color: #212529; }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .outline-btn {
+            border: 1px solid #1a73e8;
+            background-color: transparent;
+            color: #1a73e8;
+            padding: 8px 30px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .outline-btn:hover {
+            background-color: #f0f4f9;
+        }
+
+        .bottom-text {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+
+        .example-text {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .student-name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        
+        #image-viewer {
+            margin: 20px 0;
+            display: none; 
+        }
+
+        #image-viewer img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>METODOLOGÍAS DE DESARROLLO DE SW</h1>
+        <h2 class="subtitle">¿Qué es una metodología de desarrollo de software?</h2>
+        <p class="description">
+            Las metodologías de desarrollo de software son un conjunto de técnicas y métodos organizativos que se aplican para diseñar soluciones de software informático. El objetivo de las distintas metodologías es el de intentar organizar los equipos de trabajo para que estos desarrollen las funciones de un programa de la mejor manera posible.
+        </p>
+
+        <h2 class="section-title">TIPOS DE METODOLOGÍAS</h2>
+        
+        <hr>
+
+        <div class="button-grid">
+            <button class="btn-method btn-cascada" onclick="showImage('cascada')">CASCADA</button>
+            <button class="btn-method btn-modelo-v" onclick="showImage('modelov')">MODELO V</button>
+            <button class="btn-method btn-agiles" onclick="showImage('agiles')">ÁGILES</button>
+            <button class="btn-method btn-scrum" onclick="showImage('scrum')">SCRUM</button>
+        </div>
+        <div class="button-grid">
+            <button class="btn-method btn-kanban" onclick="showImage('kanban')">KANBAN</button>
+            <button class="btn-method btn-xp" onclick="showImage('xp')">XP</button>
+            <button class="btn-method btn-hibridas" onclick="showImage('hibridas')">HÍBRIDAS</button>
+        </div>
+
+        <div id="image-viewer">
+            <img id="dynamic-img" src="" alt="Imagen de metodología">
+        </div>
+
+        <hr>
+
+        <div class="link-title">LINK A TABLERO DE TRABAJO</div>
+        <button class="outline-btn" onclick="window.location.href='https://diegoutd.atlassian.net/jira/software/projects/DIEG/boards/34'">---- JIRA ----</button>
+        
+        <hr style="margin: 40px 0;">
+
+        <button class="outline-btn" onclick="window.location.href='/'">---- REGRESAR MENÚ PRINCIPAL ----</button> 
+        <div class="example-text">" LA FE ES DAR EL PRIMER PASO INCLUSO CUANDO NO VES EL FINAL DE LA ESCALERA "</div>
+        <div class="student-name">Alumno: Diego Rodriguez Nuñez</div>
+
+    </div>
+
+    <script>
+        function showImage(methodology) {
+            const viewer = document.getElementById('image-viewer');
+            const img = document.getElementById('dynamic-img');
+            
+            const images = {
+                'cascada': 'https://www.medikt.com.mx/practicas/1_cascada.png',
+                'modelov': 'https://www.medikt.com.mx/practicas/2_modelo_v.png',
+                'agiles': 'https://www.medikt.com.mx/practicas/3_agiles.png',
+                'scrum': 'https://www.medikt.com.mx/practicas/4_scrum.png',
+                'kanban': 'https://www.medikt.com.mx/practicas/5_kanban.png',
+                'xp': 'https://www.medikt.com.mx/practicas/6_xp.png',
+                'hibridas': 'https://www.medikt.com.mx/practicas/7_hibridas.png'
+            };
+
+            if(images[methodology]) {
+                img.src = images[methodology];
+                viewer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

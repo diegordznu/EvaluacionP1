@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import miFotoLocal from './yo.jpeg';
+import miFotoLocal from './yo2.png';
 
 function App() {
   return (
@@ -24,10 +24,17 @@ function App() {
           </a>
 
           <a 
-            href="/documentacion.html" 
+            href={`${process.env.PUBLIC_URL}/documentacion.html`} 
             className="link-text"
           >
             DOCUMENTACION PARCIAL 1
+          </a>
+
+          <a 
+            href={`${process.env.PUBLIC_URL}/documentacion2.html`} 
+            className="link-text"
+          >
+            DOCUMENTACION PARCIAL 2
           </a>
         </div>
 
