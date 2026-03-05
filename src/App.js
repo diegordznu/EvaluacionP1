@@ -9,7 +9,7 @@ function App() {
         
         <img src={miFotoLocal} alt="Avatar" className="avatar-img" />
 
-        <h1 className="title">Evaluación parcial 1</h1>
+        <h1 className="title">Evaluación parcial 2</h1>
         
         <h2 className="subtitle">Alumno(a): Diego Rodriguez Nuñez</h2>
 
