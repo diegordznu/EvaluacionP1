@@ -31,7 +31,7 @@ function App() {
           </a>
 
           <a 
-            href={`${process.env.PUBLIC_URL}/documentacion2.html`} 
+            href={`${process.env.PUBLIC_URL}/parcial2.html`} 
             className="link-text"
           >
             DOCUMENTACION PARCIAL 2
